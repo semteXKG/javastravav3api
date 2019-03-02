@@ -117,7 +117,7 @@ public interface ClubGroupEventService extends StravaService {
 	/**
 	 * <p>
 	 * Join a group {@link StravaClubEvent event} on behalf of the authenticated {@link StravaAthlete athlete}. For recurring events, join the upcoming occurrence. An {@link Token access token} with
-	 * {@link AuthorisationScope#WRITE write scope} is required.
+	 * {@link AuthorisationScope#PROFILE_WRITE write scope} is required.
 	 * </p>
 	 *
 	 * @param id
@@ -129,7 +129,7 @@ public interface ClubGroupEventService extends StravaService {
 	/**
 	 * <p>
 	 * Join a group {@link StravaClubEvent event} on behalf of the authenticated {@link StravaAthlete athlete}. For recurring events, join the upcoming occurrence. An {@link Token access token} with
-	 * {@link AuthorisationScope#WRITE write scope} is required.
+	 * {@link AuthorisationScope#PROFILE_WRITE write scope} is required.
 	 * </p>
 	 *
 	 * @param id
@@ -141,7 +141,7 @@ public interface ClubGroupEventService extends StravaService {
 	/**
 	 * <p>
 	 * Leave a group {@link StravaClubEvent event} on behalf of the authenticated {@link StravaAthlete athlete}. For recurring events, leave the upcoming occurrence. An {@link Token access token} with
-	 * {@link AuthorisationScope#WRITE write scope} is required.
+	 * {@link AuthorisationScope#PROFILE_WRITE write scope} is required.
 	 * </p>
 	 *
 	 * @param id
@@ -153,7 +153,7 @@ public interface ClubGroupEventService extends StravaService {
 	/**
 	 * <p>
 	 * Leave a group {@link StravaClubEvent event} on behalf of the authenticated {@link StravaAthlete athlete}. For recurring events, leave the upcoming occurrence. An {@link Token access token} with
-	 * {@link AuthorisationScope#WRITE write scope} is required.
+	 * {@link AuthorisationScope#PROFILE_WRITE write scope} is required.
 	 * </p>
 	 *
 	 * @param id

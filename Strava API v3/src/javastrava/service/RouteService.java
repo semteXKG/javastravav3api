@@ -20,7 +20,7 @@ public interface RouteService extends StravaService {
 	/**
 	 * <p>
 	 * This request is used to retrieve details about a route. Private routes can only be accessed if owned by the authenticating
-	 * user and the token has {@link AuthorisationScope#VIEW_PRIVATE view_private} permissions. For raw data associated with a route
+	 * user and the token has {@link AuthorisationScope#READ_ALL view_private} permissions. For raw data associated with a route
 	 * see route streams.
 	 * </p>
 	 *
@@ -33,7 +33,7 @@ public interface RouteService extends StravaService {
 	/**
 	 * <p>
 	 * This request is used to retrieve details about a route. Private routes can only be accessed if owned by the authenticating
-	 * user and the token has {@link AuthorisationScope#VIEW_PRIVATE view_private} permissions. For raw data associated with a route
+	 * user and the token has {@link AuthorisationScope#READ_ALL view_private} permissions. For raw data associated with a route
 	 * see route streams.
 	 * </p>
 	 *
@@ -46,7 +46,7 @@ public interface RouteService extends StravaService {
 	/**
 	 * <p>
 	 * Lists a specific athlete’s routes. Private routes will only be included if the authenticating user is viewing their own
-	 * routes and the token has {@link AuthorisationScope#VIEW_PRIVATE view_private} permissions.
+	 * routes and the token has {@link AuthorisationScope#READ_ALL view_private} permissions.
 	 * </p>
 	 *
 	 * @param id
@@ -58,7 +58,7 @@ public interface RouteService extends StravaService {
 	/**
 	 * <p>
 	 * Lists a specific athlete’s routes. Private routes will only be included if the authenticating user is viewing their own
-	 * routes and the token has {@link AuthorisationScope#VIEW_PRIVATE view_private} permissions.
+	 * routes and the token has {@link AuthorisationScope#READ_ALL view_private} permissions.
 	 * </p>
 	 *
 	 * @param id

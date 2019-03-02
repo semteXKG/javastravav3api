@@ -22,7 +22,7 @@ import retrofit.http.Query;
 public interface RouteAPI {
 	/**
 	 * <p>
-	 * This request is used to retrieve details about a route. Private routes can only be accessed if owned by the authenticating user and the token has {@link AuthorisationScope#VIEW_PRIVATE
+	 * This request is used to retrieve details about a route. Private routes can only be accessed if owned by the authenticating user and the token has {@link AuthorisationScope#READ_ALL
 	 * view_private} permissions. For raw data associated with a route see route streams.
 	 * </p>
 	 *
@@ -34,14 +34,14 @@ public interface RouteAPI {
 	 * @throws BadRequestException
 	 *             If the id is not an integer
 	 * @throws UnauthorizedException
-	 *             If the route is private and the token has {@link AuthorisationScope#VIEW_PRIVATE view_private}
+	 *             If the route is private and the token has
 	 */
 	@GET("/routes/{id}")
 	public StravaRoute getRoute(@Path("id") Integer routeId) throws NotFoundException, BadRequestException, UnauthorizedException;
 
 	/**
 	 * <p>
-	 * This request is used to retrieve details about a route. Private routes can only be accessed if owned by the authenticating user and the token has {@link AuthorisationScope#VIEW_PRIVATE
+	 * This request is used to retrieve details about a route. Private routes can only be accessed if owned by the authenticating user and the token has {@link AuthorisationScope#READ_ALL
 	 * view_private} permissions. For raw data associated with a route see route streams.
 	 * </p>
 	 *
@@ -54,14 +54,14 @@ public interface RouteAPI {
 	 * @throws BadRequestException
 	 *             If the id is not an integer
 	 * @throws UnauthorizedException
-	 *             If the route is private and the token has {@link AuthorisationScope#VIEW_PRIVATE view_private}
+	 *             If the route is private and the token has {@link AuthorisationScope#READ_ALL view_private}
 	 */
 	@GET("/routes/{id}")
 	public void getRoute(@Path("id") Integer routeId, StravaAPICallback<StravaRoute> callback);
 
 	/**
 	 * <p>
-	 * This request is used to retrieve details about a route. Private routes can only be accessed if owned by the authenticating user and the token has {@link AuthorisationScope#VIEW_PRIVATE
+	 * This request is used to retrieve details about a route. Private routes can only be accessed if owned by the authenticating user and the token has {@link AuthorisationScope#READ_ALL
 	 * view_private} permissions. For raw data associated with a route see route streams.
 	 * </p>
 	 *
@@ -73,14 +73,14 @@ public interface RouteAPI {
 	 * @throws BadRequestException
 	 *             If the id is not an integer
 	 * @throws UnauthorizedException
-	 *             If the route is private and the token has {@link AuthorisationScope#VIEW_PRIVATE view_private}
+	 *             If the route is private and the token has {@link AuthorisationScope#READ_ALL view_private}
 	 */
 	@GET("/routes/{id}")
 	public Response getRouteRaw(@Path("id") Integer routeId) throws NotFoundException, BadRequestException, UnauthorizedException;
 
 	/**
 	 * <p>
-	 * Lists a specific athlete’s routes. Private routes will only be included if the authenticating user is viewing their own routes and the token has {@link AuthorisationScope#VIEW_PRIVATE
+	 * Lists a specific athlete’s routes. Private routes will only be included if the authenticating user is viewing their own routes and the token has {@link AuthorisationScope#READ_ALL
 	 * view_private} permissions.
 	 * </p>
 	 *
@@ -105,7 +105,7 @@ public interface RouteAPI {
 
 	/**
 	 * <p>
-	 * Lists a specific athlete’s routes. Private routes will only be included if the authenticating user is viewing their own routes and the token has {@link AuthorisationScope#VIEW_PRIVATE
+	 * Lists a specific athlete’s routes. Private routes will only be included if the authenticating user is viewing their own routes and the token has {@link AuthorisationScope#READ_ALL
 	 * view_private} permissions.
 	 * </p>
 	 *
@@ -132,7 +132,7 @@ public interface RouteAPI {
 
 	/**
 	 * <p>
-	 * Lists a specific athlete’s routes. Private routes will only be included if the authenticating user is viewing their own routes and the token has {@link AuthorisationScope#VIEW_PRIVATE
+	 * Lists a specific athlete’s routes. Private routes will only be included if the authenticating user is viewing their own routes and the token has {@link AuthorisationScope#READ_ALL
 	 * view_private} permissions.
 	 * </p>
 	 *

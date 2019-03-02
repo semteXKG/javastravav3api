@@ -991,8 +991,8 @@ public class API {
 
 	/**
 	 * <p>
-	 * This request is used to retrieve details about a route. Private routes can only be accessed if owned by the authenticating user and the token has {@link AuthorisationScope#VIEW_PRIVATE
-	 * view_private} permissions. For raw data associated with a route see route streams.
+	 * This request is used to retrieve details about a route. Private routes can only be accessed if owned by the authenticating user and the token has {@link AuthorisationScope#ACTIVITY_READ_ALL
+	 * activity_view_all} permissions. For raw data associated with a route see route streams.
 	 * </p>
 	 *
 	 * @param routeId
@@ -1002,8 +1002,6 @@ public class API {
 	 *             If the route does not exist
 	 * @throws BadRequestException
 	 *             If the id is not an integer
-	 * @throws UnauthorizedException
-	 *             If the route is private and the token has {@link AuthorisationScope#VIEW_PRIVATE view_private}
 	 */
 	public StravaRoute getRoute(@Path("id") Integer routeId) throws NotFoundException, BadRequestException, UnauthorizedException {
 		return this.routeAPI.getRoute(routeId);
@@ -1018,8 +1016,7 @@ public class API {
 
 	/**
 	 * <p>
-	 * This request is used to retrieve details about a route. Private routes can only be accessed if owned by the authenticating user and the token has {@link AuthorisationScope#VIEW_PRIVATE
-	 * view_private} permissions. For raw data associated with a route see route streams.
+	 * This request is used to retrieve details about a route. Private routes can only be accessed if owned by the authenticating user and the token has {@link AuthorisationScope#ACTIVITY_READ_ALL} permissions. For raw data associated with a route see route streams.
 	 * </p>
 	 *
 	 * @param routeId
@@ -1029,8 +1026,6 @@ public class API {
 	 *             If the route does not exist
 	 * @throws BadRequestException
 	 *             If the id is not an integer
-	 * @throws UnauthorizedException
-	 *             If the route is private and the token has {@link AuthorisationScope#VIEW_PRIVATE view_private}
 	 */
 	public StravaAPIFuture<StravaRoute> getRouteAsync(@Path("id") Integer routeId) throws NotFoundException, BadRequestException, UnauthorizedException {
 		final StravaAPIFuture<StravaRoute> future = new StravaAPIFuture<>();
@@ -1334,7 +1329,7 @@ public class API {
 	/**
 	 * <p>
 	 * Join a group {@link StravaClubEvent event} on behalf of the authenticated {@link StravaAthlete athlete}. For recurring events, join the upcoming occurrence. An {@link Token access token} with
-	 * {@link AuthorisationScope#WRITE write scope} is required.
+	 * {@link AuthorisationScope#PROFILE_WRITE write scope} is required.
 	 * </p>
 	 *
 	 * @param id
@@ -1343,7 +1338,7 @@ public class API {
 	 * @throws NotFoundException
 	 *             if the event does not exist
 	 * @throws UnauthorizedException
-	 *             if the {@link Token access token} does not have {@link AuthorisationScope#WRITE write scope}
+	 *             if the {@link Token access token} does not have {@link AuthorisationScope#PROFILE_WRITE write scope}
 	 */
 	public StravaClubEventJoinResponse joinEvent(Integer id) throws NotFoundException, UnauthorizedException {
 		return this.clubGroupEventAPI.joinEvent(id);
@@ -1352,7 +1347,7 @@ public class API {
 	/**
 	 * <p>
 	 * Join a group {@link StravaClubEvent event} on behalf of the authenticated {@link StravaAthlete athlete}. For recurring events, join the upcoming occurrence. An {@link Token access token} with
-	 * {@link AuthorisationScope#WRITE write scope} is required.
+	 * {@link AuthorisationScope#PROFILE_WRITE write scope} is required.
 	 * </p>
 	 *
 	 * @param id
@@ -1361,7 +1356,7 @@ public class API {
 	 * @throws NotFoundException
 	 *             if the event does not exist
 	 * @throws UnauthorizedException
-	 *             if the {@link Token access token} does not have {@link AuthorisationScope#WRITE write scope}
+	 *             if the {@link Token access token} does not have {@link AuthorisationScope#PROFILE_WRITE write scope}
 	 */
 	public StravaAPIFuture<StravaClubEventJoinResponse> joinEventAsync(Integer id) throws NotFoundException, UnauthorizedException {
 		final StravaAPIFuture<StravaClubEventJoinResponse> future = new StravaAPIFuture<>();
@@ -1422,7 +1417,7 @@ public class API {
 	/**
 	 * <p>
 	 * Leave a group {@link StravaClubEvent event} on behalf of the authenticated {@link StravaAthlete athlete}. For recurring events, leave the upcoming occurrence. An {@link Token access token} with
-	 * {@link AuthorisationScope#WRITE write scope} is required.
+	 * {@link AuthorisationScope#PROFILE_WRITE write scope} is required.
 	 * </p>
 	 *
 	 * @param id
@@ -1430,8 +1425,6 @@ public class API {
 	 * @return The response indicating whether the authenticated athlete has joined the event
 	 * @throws NotFoundException
 	 *             if the event does not exist
-	 * @throws UnauthorizedException
-	 *             if the {@link Token access token} does not have {@link AuthorisationScope#WRITE write scope}
 	 */
 	public StravaClubEventJoinResponse leaveEvent(Integer id) throws NotFoundException, UnauthorizedException {
 		return this.clubGroupEventAPI.leaveEvent(id);
@@ -1440,7 +1433,7 @@ public class API {
 	/**
 	 * <p>
 	 * Leave a group {@link StravaClubEvent event} on behalf of the authenticated {@link StravaAthlete athlete}. For recurring events, leave the upcoming occurrence. An {@link Token access token} with
-	 * {@link AuthorisationScope#WRITE write scope} is required.
+	 * {@link AuthorisationScope#PROFILE_WRITE write scope} is required.
 	 * </p>
 	 *
 	 * @param id
@@ -1449,7 +1442,7 @@ public class API {
 	 * @throws NotFoundException
 	 *             if the event does not exist
 	 * @throws UnauthorizedException
-	 *             if the {@link Token access token} does not have {@link AuthorisationScope#WRITE write scope}
+	 *             if the {@link Token access token} does not have {@link AuthorisationScope#PROFILE_WRITE write scope}
 	 */
 	public StravaAPIFuture<StravaClubEventJoinResponse> leaveEventAsync(Integer id) throws NotFoundException, UnauthorizedException {
 		final StravaAPIFuture<StravaClubEventJoinResponse> future = new StravaAPIFuture<>();
@@ -1696,7 +1689,7 @@ public class API {
 
 	/**
 	 * <p>
-	 * Lists a specific athlete’s routes. Private routes will only be included if the authenticating user is viewing their own routes and the token has {@link AuthorisationScope#VIEW_PRIVATE
+	 * Lists a specific athlete’s routes. Private routes will only be included if the authenticating user is viewing their own routes and the token has {@link AuthorisationScope#ACTIVITY_READ_ALL
 	 * view_private} permissions.
 	 * </p>
 	 *
@@ -1714,8 +1707,7 @@ public class API {
 
 	/**
 	 * <p>
-	 * Lists a specific athlete’s routes. Private routes will only be included if the authenticating user is viewing their own routes and the token has {@link AuthorisationScope#VIEW_PRIVATE
-	 * view_private} permissions.
+	 * Lists a specific athlete’s routes. Private routes will only be included if the authenticating user is viewing their own routes and the token has {@link AuthorisationScope#ACTIVITY_READ_ALL} permissions.
 	 * </p>
 	 *
 	 * @param id

@@ -823,7 +823,7 @@ public class Strava implements ActivityService, AthleteService, ChallengeService
 
 	/**
 	 * <p>
-	 * This request is used to retrieve details about a route. Private routes can only be accessed if owned by the authenticating user and the token has {@link AuthorisationScope#VIEW_PRIVATE
+	 * This request is used to retrieve details about a route. Private routes can only be accessed if owned by the authenticating user and the token has {@link AuthorisationScope#READ_ALL
 	 * view_private} permissions. For raw data associated with a route see route streams.
 	 * </p>
 	 *
@@ -838,7 +838,7 @@ public class Strava implements ActivityService, AthleteService, ChallengeService
 
 	/**
 	 * <p>
-	 * This request is used to retrieve details about a route. Private routes can only be accessed if owned by the authenticating user and the token has {@link AuthorisationScope#VIEW_PRIVATE
+	 * This request is used to retrieve details about a route. Private routes can only be accessed if owned by the authenticating user and the token has {@link AuthorisationScope#READ_ALL
 	 * view_private} permissions. For raw data associated with a route see route streams.
 	 * </p>
 	 *
@@ -2042,7 +2042,7 @@ public class Strava implements ActivityService, AthleteService, ChallengeService
 
 	/**
 	 * <p>
-	 * Lists a specific athlete’s routes. Private routes will only be included if the authenticating user is viewing their own routes and the token has {@link AuthorisationScope#VIEW_PRIVATE
+	 * Lists a specific athlete’s routes. Private routes will only be included if the authenticating user is viewing their own routes and the token has {@link AuthorisationScope#READ_ALL
 	 * view_private} permissions.
 	 * </p>
 	 *
@@ -2057,7 +2057,7 @@ public class Strava implements ActivityService, AthleteService, ChallengeService
 
 	/**
 	 * <p>
-	 * Lists a specific athlete’s routes. Private routes will only be included if the authenticating user is viewing their own routes and the token has {@link AuthorisationScope#VIEW_PRIVATE
+	 * Lists a specific athlete’s routes. Private routes will only be included if the authenticating user is viewing their own routes and the token has {@link AuthorisationScope#READ_ALL
 	 * view_private} permissions.
 	 * </p>
 	 *

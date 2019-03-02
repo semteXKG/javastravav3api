@@ -106,7 +106,7 @@ public interface ClubGroupEventAPI {
 	/**
 	 * <p>
 	 * Join a group {@link StravaClubEvent event} on behalf of the authenticated {@link StravaAthlete athlete}. For recurring events, join the upcoming occurrence. An {@link Token access token} with
-	 * {@link AuthorisationScope#WRITE write scope} is required.
+	 * {@link AuthorisationScope#PROFILE_WRITE write scope} is required.
 	 * </p>
 	 *
 	 * @param id
@@ -114,16 +114,13 @@ public interface ClubGroupEventAPI {
 	 * @return The response indicating whether the authenticated athlete has joined the event
 	 * @throws NotFoundException
 	 *             if the event does not exist
-	 * @throws UnauthorizedException
-	 *             if the {@link Token access token} does not have {@link AuthorisationScope#WRITE write scope}
 	 */
 	@POST("/group_events/{id}/rsvps")
 	public StravaClubEventJoinResponse joinEvent(@Path("id") Integer id) throws NotFoundException, UnauthorizedException;
 
 	/**
 	 * <p>
-	 * Join a group {@link StravaClubEvent event} on behalf of the authenticated {@link StravaAthlete athlete}. For recurring events, join the upcoming occurrence. An {@link Token access token} with
-	 * {@link AuthorisationScope#WRITE write scope} is required.
+	 *     spam
 	 * </p>
 	 *
 	 * @param id
@@ -132,16 +129,13 @@ public interface ClubGroupEventAPI {
 	 *            The callback which can be used to get the response indicating whether the authenticated athlete has joined the event
 	 * @throws NotFoundException
 	 *             if the event does not exist
-	 * @throws UnauthorizedException
-	 *             if the {@link Token access token} does not have {@link AuthorisationScope#WRITE write scope}
 	 */
 	@POST("/group_events/{id}/rsvps")
 	public void joinEvent(@Path("id") Integer id, StravaAPICallback<StravaClubEventJoinResponse> callback) throws NotFoundException, UnauthorizedException;
 
 	/**
 	 * <p>
-	 * Join a group {@link StravaClubEvent event} on behalf of the authenticated {@link StravaAthlete athlete}. For recurring events, join the upcoming occurrence. An {@link Token access token} with
-	 * {@link AuthorisationScope#WRITE write scope} is required.
+	 *     spam
 	 * </p>
 	 *
 	 * @param id
@@ -149,16 +143,13 @@ public interface ClubGroupEventAPI {
 	 * @return The response indicating whether the authenticated athlete has joined the event
 	 * @throws NotFoundException
 	 *             if the event does not exist
-	 * @throws UnauthorizedException
-	 *             if the {@link Token access token} does not have {@link AuthorisationScope#WRITE write scope}
 	 */
 	@POST("/group_events/{id}/rsvps")
 	public Response joinEventRaw(@Path("id") Integer id) throws NotFoundException, UnauthorizedException;
 
 	/**
 	 * <p>
-	 * Leave a group {@link StravaClubEvent event} on behalf of the authenticated {@link StravaAthlete athlete}. For recurring events, leave the upcoming occurrence. An {@link Token access token} with
-	 * {@link AuthorisationScope#WRITE write scope} is required.
+	 *     spam
 	 * </p>
 	 *
 	 * @param id
@@ -166,16 +157,13 @@ public interface ClubGroupEventAPI {
 	 * @return The response indicating whether the authenticated athlete has joined the event
 	 * @throws NotFoundException
 	 *             if the event does not exist
-	 * @throws UnauthorizedException
-	 *             if the {@link Token access token} does not have {@link AuthorisationScope#WRITE write scope}
 	 */
 	@DELETE("/group_events/{id}/rsvps")
 	public StravaClubEventJoinResponse leaveEvent(@Path("id") Integer id) throws NotFoundException, UnauthorizedException;
 
 	/**
 	 * <p>
-	 * Leave a group {@link StravaClubEvent event} on behalf of the authenticated {@link StravaAthlete athlete}. For recurring events, leave the upcoming occurrence. An {@link Token access token} with
-	 * {@link AuthorisationScope#WRITE write scope} is required.
+	 *     spam
 	 * </p>
 	 *
 	 * @param id
@@ -184,16 +172,13 @@ public interface ClubGroupEventAPI {
 	 *            The callback which can be used to get the response indicating whether the authenticated athlete has joined the event
 	 * @throws NotFoundException
 	 *             if the event does not exist
-	 * @throws UnauthorizedException
-	 *             if the {@link Token access token} does not have {@link AuthorisationScope#WRITE write scope}
 	 */
 	@DELETE("/group_events/{id}/rsvps")
 	public void leaveEvent(@Path("id") Integer id, StravaAPICallback<StravaClubEventJoinResponse> callback) throws NotFoundException, UnauthorizedException;
 
 	/**
 	 * <p>
-	 * Leave a group {@link StravaClubEvent event} on behalf of the authenticated {@link StravaAthlete athlete}. For recurring events, leave the upcoming occurrence. An {@link Token access token} with
-	 * {@link AuthorisationScope#WRITE write scope} is required.
+	 *     spam
 	 * </p>
 	 *
 	 * @param id
@@ -201,8 +186,6 @@ public interface ClubGroupEventAPI {
 	 * @return The response indicating whether the authenticated athlete has joined the event
 	 * @throws NotFoundException
 	 *             if the event does not exist
-	 * @throws UnauthorizedException
-	 *             if the {@link Token access token} does not have {@link AuthorisationScope#WRITE write scope}
 	 */
 	@DELETE("/group_events/{id}/rsvps")
 	public Response leaveEventRaw(@Path("id") Integer id) throws NotFoundException, UnauthorizedException;
